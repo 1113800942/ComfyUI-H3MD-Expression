@@ -56,6 +56,8 @@ cd ComfyUI/custom_nodes
 git clone https://github.com/1113800942/ComfyUI-H3MD-Expression
 ```
 
+Or download the zip from the Hugging Face mirror: https://huggingface.co/yj0942/H3MD-Expression
+
 Restart ComfyUI. No pip packages beyond a standard ComfyUI install.
 
 On first use the LivePortrait face models (about 520 MB) download to `models/liveportrait`. If you already have them there (from another LivePortrait plugin), they are used as they are.

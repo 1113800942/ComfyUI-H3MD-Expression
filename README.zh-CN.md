@@ -56,6 +56,8 @@ cd ComfyUI/custom_nodes
 git clone https://github.com/1113800942/ComfyUI-H3MD-Expression
 ```
 
+也可以从抱抱脸镜像下载压缩包：https://huggingface.co/yj0942/H3MD-Expression
+
 重启 ComfyUI。除了 ComfyUI 本身自带的，不需要装任何 pip 包。
 
 第一次使用时会自动下载 LivePortrait 的人脸模型（约 520 MB）到 `models/liveportrait`。如果你装过别的 LivePortrait 插件、那里已经有了，就直接用。
