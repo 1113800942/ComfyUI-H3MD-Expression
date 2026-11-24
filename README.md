@@ -9,6 +9,28 @@ Give any face a precise expression — by sliders, from a built-in library, or c
 
 Free and open source. One package, no other ComfyUI plugin to install.
 
+## Examples
+
+**MiniMax H3 videos driven by an expression RefMod** (H3MD Director)
+
+| Surprised | Holding back tears |
+|:---:|:---:|
+| <img src="docs/media/h3_surprised.gif" width="400"> | <img src="docs/media/h3_holding_tears.gif" width="400"> |
+
+**One picture, many expressions** — the calm original and five built-in expressions
+
+<img src="docs/media/expressions_6.jpg" width="820">
+
+**Export image** — the whole picture at its own size, only the expression changed
+
+<img src="docs/media/export_before_after.jpg" width="820">
+
+<details><summary>All 22 built-in expressions</summary>
+
+<img src="docs/media/library_22.jpg" width="900">
+
+</details>
+
 ## What you get
 
 One node, **H3MD Expression Studio**. Its button opens a full-screen studio:

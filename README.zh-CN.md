@@ -9,6 +9,28 @@
 
 免费开源。只装这一个包，不用再装别的 ComfyUI 插件。
 
+## 示例
+
+**用表情 RefMod 驱动的 MiniMax H3 视频**（H3MD 导演台）
+
+| 惊讶 | 强忍眼泪 |
+|:---:|:---:|
+| <img src="docs/media/h3_surprised.gif" width="400"> | <img src="docs/media/h3_holding_tears.gif" width="400"> |
+
+**一张图，多种表情**：平静的原图和 5 个内置表情
+
+<img src="docs/media/expressions_6.jpg" width="820">
+
+**导出图片**：整张原尺寸图片，只换表情
+
+<img src="docs/media/export_before_after.jpg" width="820">
+
+<details><summary>全部 22 个内置表情</summary>
+
+<img src="docs/media/library_22.jpg" width="900">
+
+</details>
+
 ## 功能
 
 一个节点：**H3MD 表情工作台**。点节点上的按钮打开全屏工作台：
