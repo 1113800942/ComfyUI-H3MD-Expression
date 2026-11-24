@@ -1,0 +1,21 @@
+[project]
+name = "comfyui-h3md-expression"
+description = "H3MD Expression Studio: give any face a precise expression (sliders, 22-expression library, or copied from a video) and export it as a MiniMax H3 RefMod or as a full-size picture. Built-in LivePortrait engine, no other plugin needed."
+version = "0.8.0"
+license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "YJ" }]
+requires-python = ">=3.10"
+dependencies = []  # no pip dependencies beyond a standard ComfyUI install (torch, numpy, opencv, Pillow, PyYAML)
+classifiers = [
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+]
+
+[project.urls]
+Repository = "https://github.com/1113800942/ComfyUI-H3MD-Expression"
+"Bug Tracker" = "https://github.com/1113800942/ComfyUI-H3MD-Expression/issues"
+
+#  Used by Comfy Registry https://registry.comfy.org
+[tool.comfy]
+PublisherId = "yj1113800942"
+DisplayName = "H3MD Expression Studio"

@@ -1,0 +1,565 @@
+{
+ "version": "0.3",
+ "notes": "Sliders = AdvancedLivePortrait editor values (blink < 0 narrows the eyes, eyebrow > 0 raises, smile < 0 = corners down, aaa = mouth open, pitch > 0 = chin down). kp = raw keypoint offsets [index, axis, value] (14 y+ flattens the mouth corners, 20 y- lifts the upper lip). left / right = screen sides, added on top of both. onset = strength of the first frame, release = a number (part of the peak) or its own settings. Built-in set: 13 common expressions; users add their own in the Expression Studio.",
+ "expressions": [
+  {
+   "id": "smile",
+   "zh": "微笑",
+   "en": "smile",
+   "styles": [
+    {
+     "name": "A 微笑",
+     "en": "a warm smile: mouth corners lift, cheeks rise, eyes soften",
+     "both": {
+      "smile": 0.8,
+      "blink": -3,
+      "eyebrow": 2
+     }
+    },
+    {
+     "name": "B 抿嘴笑",
+     "en": "a small closed-lip smile, lips pressed together, eyes slightly narrowed",
+     "both": {
+      "smile": 0.5,
+      "blink": -2,
+      "kp": [
+       [
+        19,
+        1,
+        -0.004
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "laugh",
+   "zh": "大笑",
+   "en": "big laugh",
+   "styles": [
+    {
+     "name": "A 仰头大笑",
+     "en": "a big open laugh: mouth wide open, eyes squeezed into crescents, head tips back",
+     "both": {
+      "smile": 1.2,
+      "aaa": 45,
+      "blink": -8,
+      "eyebrow": 3,
+      "pitch": -4
+     }
+    },
+    {
+     "name": "B 笑出声",
+     "en": "laughing out loud: wide smile with the mouth open, eyes crinkled",
+     "both": {
+      "smile": 1.0,
+      "aaa": 25,
+      "blink": -6,
+      "eyebrow": 2
+     }
+    }
+   ]
+  },
+  {
+   "id": "shy_smile",
+   "zh": "害羞",
+   "en": "shy smile",
+   "styles": [
+    {
+     "name": "A 低头羞笑",
+     "en": "a shy smile: eyes drop away, head lowers and tilts, mouth corners lift softly",
+     "both": {
+      "smile": 0.6,
+      "blink": -5,
+      "pupil_y": -6,
+      "pitch": 6,
+      "yaw": 5,
+      "roll": 4
+     }
+    }
+   ]
+  },
+  {
+   "id": "surprised",
+   "zh": "惊讶",
+   "en": "surprised",
+   "styles": [
+    {
+     "name": "A 睁眼张嘴",
+     "en": "eyes widen, brows shoot up, mouth drops open",
+     "both": {
+      "blink": 4,
+      "eyebrow": 12,
+      "aaa": 30
+     }
+    },
+    {
+     "name": "B 倒吸一口气",
+     "en": "a small gasp: eyes widen, brows lift, lips part a little, head pulls back",
+     "both": {
+      "blink": 3,
+      "eyebrow": 9,
+      "aaa": 12,
+      "woo": 3,
+      "pitch": -3
+     }
+    }
+   ]
+  },
+  {
+   "id": "fear",
+   "zh": "害怕",
+   "en": "fear",
+   "styles": [
+    {
+     "name": "A 惊恐",
+     "en": "fear: eyes wide, brows high and tense, mouth stretched open, head pulls back",
+     "both": {
+      "eyebrow": 15,
+      "blink": 5,
+      "aaa": 40,
+      "eee": 10,
+      "pitch": -4
+     }
+    },
+    {
+     "name": "B 紧张",
+     "en": "nervous fear: brows lifted, eyes wide and darting aside, lips pressed thin",
+     "both": {
+      "eyebrow": 12,
+      "blink": 4,
+      "pupil_x": 10,
+      "kp": [
+       [
+        19,
+        1,
+        -0.0072
+       ],
+       [
+        20,
+        2,
+        -0.0144
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "angry",
+   "zh": "愤怒",
+   "en": "angry",
+   "styles": [
+    {
+     "name": "A 怒目",
+     "en": "anger: brows pulled down hard, a fixed glaring stare, mouth corners pulled down, chin lowered",
+     "both": {
+      "eyebrow": -15,
+      "blink": 2,
+      "pitch": 3,
+      "kp": [
+       [
+        20,
+        1,
+        0.01
+       ],
+       [
+        14,
+        1,
+        0.02
+       ],
+       [
+        17,
+        1,
+        -0.0065
+       ],
+       [
+        17,
+        2,
+        -0.003
+       ]
+      ]
+     }
+    },
+    {
+     "name": "B 咬牙",
+     "en": "furious: brows down, eyes narrowed to a glare, teeth clenched and bared",
+     "both": {
+      "eyebrow": -15,
+      "blink": -5,
+      "eee": 15,
+      "aaa": 8,
+      "kp": [
+       [
+        20,
+        1,
+        0.006
+       ],
+       [
+        14,
+        1,
+        0.012
+       ],
+       [
+        17,
+        1,
+        -0.0039
+       ],
+       [
+        17,
+        2,
+        -0.0018
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "sad",
+   "zh": "悲伤",
+   "en": "sad",
+   "styles": [
+    {
+     "name": "A 低头难过",
+     "en": "quiet sadness: brows tilt up, heavy eyelids, eyes look down, mouth corners droop",
+     "both": {
+      "eyebrow": 8,
+      "blink": -7,
+      "pupil_y": -8,
+      "pitch": 6,
+      "kp": [
+       [
+        20,
+        1,
+        0.012
+       ],
+       [
+        14,
+        1,
+        0.024
+       ],
+       [
+        17,
+        1,
+        -0.0078
+       ],
+       [
+        17,
+        2,
+        -0.0036
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "holding_tears",
+   "zh": "强忍眼泪",
+   "en": "holding back tears",
+   "styles": [
+    {
+     "name": "A 抬眼忍泪",
+     "en": "inner brows rise and pinch, eyes glisten and look slightly up to hold the tears in, lips press together, mouth corners pull down",
+     "both": {
+      "eyebrow": 7,
+      "blink": -6,
+      "smile": -0.5,
+      "woo": -3,
+      "pupil_y": 4,
+      "kp": [
+       [
+        14,
+        1,
+        0.012
+       ]
+      ]
+     }
+    },
+    {
+     "name": "B 低头抿嘴",
+     "en": "head lowers, heavy eyelids, brows tense upward, lips pressed into a trembling pout",
+     "both": {
+      "eyebrow": 4,
+      "blink": -7,
+      "smile": -0.6,
+      "pitch": 5,
+      "kp": [
+       [
+        14,
+        1,
+        0.012
+       ]
+      ]
+     },
+     "release": 0.6
+    }
+   ]
+  },
+  {
+   "id": "crying",
+   "zh": "哭",
+   "en": "crying",
+   "styles": [
+    {
+     "name": "A 放声哭",
+     "en": "crying openly: brows pinched up, eyes squeezed shut, mouth open and pulled down",
+     "both": {
+      "eyebrow": 12,
+      "blink": -12,
+      "aaa": 50,
+      "eee": 8,
+      "pitch": 3,
+      "kp": [
+       [
+        20,
+        1,
+        0.012
+       ],
+       [
+        14,
+        1,
+        0.024
+       ],
+       [
+        17,
+        1,
+        -0.0078
+       ],
+       [
+        17,
+        2,
+        -0.0036
+       ]
+      ]
+     }
+    },
+    {
+     "name": "B 啜泣",
+     "en": "sobbing quietly: brows up, eyes nearly shut, lips trembling and turned down, head lowered",
+     "both": {
+      "eyebrow": 10,
+      "blink": -14,
+      "aaa": 10,
+      "pitch": 6,
+      "kp": [
+       [
+        20,
+        1,
+        0.013
+       ],
+       [
+        14,
+        1,
+        0.026
+       ],
+       [
+        17,
+        1,
+        -0.00845
+       ],
+       [
+        17,
+        2,
+        -0.0039
+       ],
+       [
+        19,
+        1,
+        -0.0036
+       ],
+       [
+        20,
+        2,
+        -0.0072
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "bitter_smile",
+   "zh": "苦笑",
+   "en": "bitter smile",
+   "styles": [
+    {
+     "name": "A 无奈苦笑",
+     "en": "a wry, helpless smile: brows lift and tilt, eyes tired, a weak smile, head slightly lowered",
+     "both": {
+      "smile": 0.35,
+      "eyebrow": 10,
+      "blink": -4,
+      "pitch": 2
+     }
+    },
+    {
+     "name": "B 单边苦笑",
+     "en": "a one-sided bitter smile: one mouth corner lifts while the other stays flat, eyes slightly narrowed",
+     "both": {
+      "blink": -3,
+      "eyebrow": -2,
+      "kp": [
+       [
+        14,
+        1,
+        0.006
+       ]
+      ]
+     },
+     "right": {
+      "smile": 0.85,
+      "kp": [
+       [
+        20,
+        1,
+        -0.006
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "disgust",
+   "zh": "嫌弃",
+   "en": "disgust",
+   "styles": [
+    {
+     "name": "A 撇嘴嫌弃",
+     "en": "a scornful huff through the nose: upper lip lifts on one side, head tilts, eyes half-lidded",
+     "both": {
+      "blink": -6,
+      "eyebrow": -10,
+      "roll": 3,
+      "pitch": -4,
+      "kp": [
+       [
+        14,
+        1,
+        0.012
+       ]
+      ]
+     },
+     "right": {
+      "smile": 0.35,
+      "kp": [
+       [
+        20,
+        1,
+        -0.013
+       ]
+      ]
+     }
+    },
+    {
+     "name": "B 冷眼嫌弃",
+     "en": "eyes narrow into a cold stare, brows lowered, chin lifted, one mouth corner tightens into a thin half smile",
+     "both": {
+      "blink": -9,
+      "eyebrow": -10,
+      "pitch": -3,
+      "kp": [
+       [
+        14,
+        1,
+        0.012
+       ]
+      ]
+     },
+     "right": {
+      "smile": 0.45
+     }
+    }
+   ]
+  },
+  {
+   "id": "pout",
+   "zh": "撇嘴",
+   "en": "pout",
+   "styles": [
+    {
+     "name": "A 撇嘴",
+     "en": "a sulky pout: lips pushed forward, mouth corners pulled down, brows slightly lowered",
+     "both": {
+      "woo": 12,
+      "eyebrow": -4,
+      "kp": [
+       [
+        20,
+        1,
+        0.014
+       ],
+       [
+        14,
+        1,
+        0.028
+       ],
+       [
+        17,
+        1,
+        -0.0091
+       ],
+       [
+        17,
+        2,
+        -0.0042
+       ],
+       [
+        19,
+        1,
+        -0.0048
+       ],
+       [
+        20,
+        2,
+        -0.0096
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "grin",
+   "zh": "呲牙",
+   "en": "teeth-baring grin",
+   "styles": [
+    {
+     "name": "A 呲牙",
+     "en": "a teeth-baring grin: lips stretched wide showing clenched teeth, eyes slightly narrowed",
+     "both": {
+      "eee": 15,
+      "aaa": 10,
+      "smile": 0.2,
+      "blink": -3,
+      "kp": [
+       [
+        13,
+        1,
+        -0.00413
+       ],
+       [
+        16,
+        1,
+        -0.00413
+       ],
+       [
+        3,
+        1,
+        -0.00525
+       ],
+       [
+        7,
+        1,
+        -0.00525
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

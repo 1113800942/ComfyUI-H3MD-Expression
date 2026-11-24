@@ -1,0 +1,31 @@
+{
+  "H3MDExpressionStudio": {
+    "display_name": "H3MD 表情工作台 v0.8.0",
+    "description": "MiniMax H3 微表情工作台，点节点上的按钮打开。",
+    "inputs": {
+      "vae": {
+        "name": "VAE",
+        "tooltip": "MiniMax H3 视频 VAE（生成 RefMod 用）"
+      },
+      "studio": {
+        "name": "工作台数据",
+        "tooltip": "由表情工作台自动填写，不用手动输入"
+      },
+      "ref_resolution": {
+        "name": "参考分辨率",
+        "tooltip": "脸部片段编码时的分辨率"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "RefMod 名称"
+      },
+      "1": {
+        "name": "提示词提示"
+      },
+      "2": {
+        "name": "脸部片段"
+      }
+    }
+  }
+}

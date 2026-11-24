@@ -1,0 +1,163 @@
+{
+  "id": "31675103-8407-4542-ae25-c7f3facbfce8",
+  "revision": 0,
+  "last_node_id": 25,
+  "last_link_id": 15,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        90
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "vaeåç§°",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "title": "Video VAE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.46.0",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      }
+    },
+    {
+      "id": 20,
+      "type": "H3MDExpressionStudio",
+      "pos": [
+        260,
+        90
+      ],
+      "size": [
+        470,
+        310
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 5
+        },
+        {
+          "localized_name": "å·¥ä½œå°æ•°æ®",
+          "name": "studio",
+          "type": "STRING",
+          "widget": {
+            "name": "studio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "å‚è€ƒåˆ†è¾¨çŽ‡",
+          "name": "ref_resolution",
+          "type": "INT",
+          "widget": {
+            "name": "ref_resolution"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "RefMod åç§°",
+          "name": "refmod_name",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "localized_name": "æç¤ºè¯æç¤º",
+          "name": "prompt_hint",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "localized_name": "è„¸éƒ¨ç‰‡æ®µ",
+          "name": "face_clip",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3MDExpressionStudio"
+      },
+      "widgets_values": [
+        "",
+        512
+      ],
+      "widgets_values_named": {
+        "studio": "{\"version\":1,\"base\":{\"kind\":\"none\"},\"strength\":1,\"tune\":{},\"head_motion\":true,\"label\":\"\",\"description\":\"\",\"image\":{\"filename\":\"ABBY.png\",\"subfolder\":\"H3MD_expression_uploads\",\"type\":\"input\"},\"character\":\"eve\"}",
+        "ref_resolution": 512
+      }
+    }
+  ],
+  "links": [
+    [
+      5,
+      2,
+      0,
+      20,
+      0,
+      "VAE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "H3MD Expression Studio: press the button on the node  è¡¨æƒ…å·¥ä½œå°ï¼šç‚¹èŠ‚ç‚¹ä¸Šçš„æŒ‰é’®",
+      "bounding": [
+        -20,
+        0,
+        835.9766926868838,
+        462.1072532922852
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8524887805923104,
+      "offset": [
+        531.2119057960016,
+        486.53895322920675
+      ]
+    }
+  },
+  "version": 0.4
+}

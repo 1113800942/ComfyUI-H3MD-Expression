@@ -1,0 +1,31 @@
+{
+  "H3MDExpressionStudio": {
+    "display_name": "H3MD Expression Studio v0.8.0",
+    "description": "Live micro-expression workbench for MiniMax H3. Press the button on the node to open it.",
+    "inputs": {
+      "vae": {
+        "name": "vae",
+        "tooltip": "MiniMax H3 video VAE (used to make the RefMod)"
+      },
+      "studio": {
+        "name": "studio",
+        "tooltip": "Filled by the Expression Studio; not meant for typing"
+      },
+      "ref_resolution": {
+        "name": "ref_resolution",
+        "tooltip": "Resolution the face clip is encoded at"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "refmod_name"
+      },
+      "1": {
+        "name": "prompt_hint"
+      },
+      "2": {
+        "name": "face_clip"
+      }
+    }
+  }
+}
